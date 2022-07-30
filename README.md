@@ -2,7 +2,7 @@
 This tool allows you to easily place items in the game Sprocket in patterns by modifying the blueprint file for your vehicle. 
 
 
-<img src="https://user-images.githubusercontent.com/36699941/181866912-ce38f0ba-054c-4754-ac23-568f5764b45a.gif" alt="position" width="570"/><img src="https://user-images.githubusercontent.com/36699941/181866937-afd2a876-b9a7-44f1-afdc-48c028dbe5e3.png" alt="position" width="370"/>
+<img src="https://user-images.githubusercontent.com/36699941/181866912-ce38f0ba-054c-4754-ac23-568f5764b45a.gif" alt="position" width="500"/><img src="https://user-images.githubusercontent.com/36699941/181866937-afd2a876-b9a7-44f1-afdc-48c028dbe5e3.png" alt="position" width="300"/>
 
 ## How to use RASPP
 Here is a not-so-quick guide on how to use RASPP:
@@ -51,6 +51,7 @@ Here is a not-so-quick guide on how to use RASPP:
  - **Q: Where do I look in the file to find a part?** A: Parts are after the `Compartments` and  vehicle options (`SS, TRK, ENG, etc`) sections. If you scroll all the way down to the bottom of the `blueprint` file you can find them and go up from there. You can also look for the "ext" tag in whatever text editor you're using.
  - **Q: My output file is blank!** A: check to make sure that your amount is not zero, or that your limit is not inside of your increment (If you are trying to go from 0.75 to 1.25 in steps of 1, then you can't ever have a part, can you?). Also, make sure you are looking in the correct file. The file location can be found in `File -> Change Save Location`.
  - **Q: How do I know which axis is which / which way negative or positive is?** A: The values are ordered in the `blueprint` the same way they are ordered in RASPP: Position (X, Y, Z), Rotation (X, Y, Z), Scale (X, Y, Z). The X axis is from left to right, with right being positive, Y is up/down with up being positive, and Z is front/back with front being positive.  In the pictures below, X is red, Y is blue and Z is green.
-	<img src="https://user-images.githubusercontent.com/36699941/181866228-a537e6f9-32fc-44d1-bcb7-7e4e16f51806.png" alt="position" width="300"/>
-	<img src="https://user-images.githubusercontent.com/36699941/181866229-a6299564-b33a-4168-84a8-a6465e387b85.png" alt="position" width="300"/>
-	<img src="https://user-images.githubusercontent.com/36699941/181866232-b4dc5bab-c4fe-4344-aef5-6bffb1c91b26.png" alt="position" width="300"/>
+ 
+	<img src="https://user-images.githubusercontent.com/36699941/181866228-a537e6f9-32fc-44d1-bcb7-7e4e16f51806.png" alt="position" width="250"/>
+	<img src="https://user-images.githubusercontent.com/36699941/181866229-a6299564-b33a-4168-84a8-a6465e387b85.png" alt="position" width="250"/>
+	<img src="https://user-images.githubusercontent.com/36699941/181866232-b4dc5bab-c4fe-4344-aef5-6bffb1c91b26.png" alt="position" width="250"/>
