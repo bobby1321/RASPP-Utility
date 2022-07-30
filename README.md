@@ -1,5 +1,5 @@
 # Repeated Automated Sprocket Part Placement Utility (RASPP)
-This tool allows you to easily place items in the game Sprocket in patterns by modifying the blueprint file for your vehicle. 
+This tool allows you to easily place items in the game Sprocket in patterns by modifying the blueprint file for your vehicle. RASPP isn't meant to replace the game, rather be an add on for the people who like to use the blueprint files as a way to edit vehicles.
 
 
 <img src="https://user-images.githubusercontent.com/36699941/181866912-ce38f0ba-054c-4754-ac23-568f5764b45a.gif" alt="position" width="500"/><img src="https://user-images.githubusercontent.com/36699941/181866937-afd2a876-b9a7-44f1-afdc-48c028dbe5e3.png" alt="position" width="300"/>
@@ -47,6 +47,7 @@ Here is a not-so-quick guide on how to use RASPP:
 
 ## FAQ
 
+ - **Q: I have a really good idea of something to add to the program!** A: Great! Submit an issue on the GitHub Repo with the tag `suggestion` and I will try to look at it. If you do want to submit a suggestion, please try to include some rough code or logic that can make your suggestion easier for me to implement. Not required, but helpful.
  - **Q: Where do I find the blueprint files?** A: RTFM.
  - **Q: Where do I look in the file to find a part?** A: Parts are after the `Compartments` and  vehicle options (`SS, TRK, ENG, etc`) sections. If you scroll all the way down to the bottom of the `blueprint` file you can find them and go up from there. You can also look for the "ext" tag in whatever text editor you're using.
  - **Q: My output file is blank!** A: check to make sure that your amount is not zero, or that your limit is not inside of your increment (If you are trying to go from 0.75 to 1.25 in steps of 1, then you can't ever have a part, can you?). Also, make sure you are looking in the correct file. The file location can be found in `File -> Change Save Location`.
@@ -55,3 +56,13 @@ Here is a not-so-quick guide on how to use RASPP:
 	<img src="https://user-images.githubusercontent.com/36699941/181866228-a537e6f9-32fc-44d1-bcb7-7e4e16f51806.png" alt="position" width="250"/>
 	<img src="https://user-images.githubusercontent.com/36699941/181866229-a6299564-b33a-4168-84a8-a6465e387b85.png" alt="position" width="250"/>
 	<img src="https://user-images.githubusercontent.com/36699941/181866232-b4dc5bab-c4fe-4344-aef5-6bffb1c91b26.png" alt="position" width="250"/>
+
+## Authors
+
+ - The game Sprocket is developed by Hamish Dunn, a guy with a ton of skill. Links here:
+	 - Steam page: https://store.steampowered.com/app/1674170/Sprocket/
+	 - Hamish's GitHub: https://github.com/Muushy
+	 - Sprocket's Twitter: https://twitter.com/SprocketTheGame
+ - A lot of the info for this project came from the official Sprocket Discord and the awesome people there. 
+	 - Link: https://discord.com/invite/baFH43keyR
+- If you want to reach out to me about this program, the best way is to either add an issue to the GitHub repo, or you can contact me on Discord @bobby1321#0770. 
