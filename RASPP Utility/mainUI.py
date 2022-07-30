@@ -22,13 +22,6 @@ class MainUI(QMainWindow):
         self.layout = QGridLayout()
         self.setLayout(self.layout)
 
-        self.fileName = "Sprocket_parts.txt"
-        self.startData = 1000
-
-        with open("RASPP.settings", "r") as f:
-            self.fileName = f.readline().strip()
-            self.startData = int(f.readline())
-
         # Tab Setup
         self._createTabs()
 
@@ -37,6 +30,42 @@ class MainUI(QMainWindow):
 
         # Setting Default Font
         # TODO
+
+        try:
+            with open("RASPP.settings", "r") as f:
+
+                if len(f.readlines()) < 2:
+                    with open("RASPP.settings", "w") as f:
+                        f.write("Sprocket_parts.txt\n")
+                        f.write("1000")
+                try:
+                    self.fileName = f.readline().strip()
+                    if not self.is_pathname_valid(self.fileName):
+                        self.fileName = "Sprocket_parts.txt"
+                        with open("RASPP.settings", "r") as f:
+                            temp = f.readlines()
+                            temp[0] = self.fileName.strip() + "\n"
+                            with open("RASPP.settings", "w") as f:
+                                f.writelines(temp)
+                except:
+                    self.fileName = "Sprocket_parts.txt"
+                    with open("RASPP.settings", "r") as f:
+                        temp = f.readlines()
+                        temp[0] = self.fileName.strip() + "\n"
+                        with open("RASPP.settings", "w") as f:
+                            f.writelines(temp)
+                self.partTab.setFileName(self.fileName)
+
+                try:
+                    self.startData = int(f.readline())
+                except:
+                    self.startData = 1000
+        except:
+            with open("RASPP.settings", "w") as f:
+                f.write("Sprocket_parts.txt\n")
+                f.write("1000")
+
+
 
     def _createTabs(self):
         """
@@ -101,20 +130,46 @@ class MainUI(QMainWindow):
         fileName1, _ = QFileDialog.getSaveFileName(self, "Change Save Location", self.fileName.strip(),
                                                   "All Files (*);;Text Files (*.txt)", options=options)
         if fileName1:
-            self.fileName = fileName1
-            self.partTab.setFileName(fileName1)
-            with open(fileName1.strip(), "w") as f:
-                f.write("")
-            with open("RASPP.settings", "r") as f:
-                temp = f.readlines()
-                temp[0] = fileName1.strip() + "\n"
-                with open("RASPP.settings", "w") as f:
-                    f.writelines(temp)
+            if self.is_pathname_valid(self.fileName):
+                self.fileName = fileName1
+                self.partTab.setFileName(fileName1)
+                with open(fileName1.strip(), "w") as f:
+                    f.write("")
+                with open("RASPP.settings", "r") as f:
+                    temp = f.readlines()
+                    temp[0] = fileName1.strip() + "\n"
+                    with open("RASPP.settings", "w") as f:
+                        f.writelines(temp)
+            else:
+                error = QMessageBox()
+                error.setWindowTitle("File Path Error")
+                error.setText("There was an error interpreting your file path.")
+                error.setInformativeText(
+                    " Please make sure your path is pointing to a valid location on your computer.")
+                error.setIcon(QMessageBox.Warning)
+                error.setStandardButtons(QMessageBox.Retry)
+                error.exec_()
 
 
     def changeStartData(self):
+        """
+        Opens a pane to let the user change the starting value of the ID list
+        :return:
+        """
         newData, done = QInputDialog.getInt(self, "Starting Data Value", "Enter a new starting data value. Only use this if you are getting red parts in your vehicles after generating a pattern.", int(self.startData))
         if newData and done:
+            try:
+                int(newData)
+            except:
+                error = QMessageBox()
+                error.setWindowTitle("Data Value Error")
+                error.setText("There was an error interpreting your data value.")
+                error.setInformativeText(
+                    " Please make sure your data value is a valid integer.")
+                error.setIcon(QMessageBox.Warning)
+                error.setStandardButtons(QMessageBox.Retry)
+                error.buttonClicked.connect(self.changeStartData())
+                error.exec_()
             self.startData = newData
             #self.partTab.
             with open("RASPP.settings", "r") as f:
@@ -124,6 +179,10 @@ class MainUI(QMainWindow):
                     f.writelines(temp)
 
     def openAbout(self):
+        """
+        Opens the About Panel
+        :return:
+        """
         aboutDialog = QDialog()
         aboutDialog.setWindowTitle("About RASPP Utility")
         aboutLabel = QTextBrowser(aboutDialog)
@@ -138,13 +197,18 @@ This tool allows you to easily place items in the game Sprocket in patterns by m
     - Sprocket's Twitter: https://twitter.com/SprocketTheGame
  - A lot of the info for this project came from the official Sprocket Discord and the awesome people there. 
     - Link: https://discord.com/invite/baFH43keyR
-- If you want to reach out to me about this program, the best way is to either add an issue to the GitHub repo, or you can contact me on Discord @bobby1321#0770. """)
+- If you want to reach out to me about this program, the best way is to either add an issue to the GitHub repo, or you can contact me on Discord @bobby1321#0770. 
+    - Link to GitHub repo: https://github.com/bobby1321/RASPP-Utility""")
         aboutLabel.setMinimumSize(500, 500)
         aboutLabel.setReadOnly(True)
         aboutLabel.setOpenExternalLinks(True)
         aboutDialog.exec_()
         
     def openQuickGuide(self):
+        """
+        Opens the Quick Guide Pane
+        :return:
+        """
         self.quickGuideDialog = QDialog()
         self.quickGuideDialog.setWindowTitle("Quick Guide to RASPP Utility")
         quickGuideLabel = QTextEdit(self.quickGuideDialog)
@@ -194,6 +258,10 @@ Here is a not-so-quick guide on how to use RASPP:
         self.quickGuideDialog.show()
 
     def openFAQ(self):
+        """
+        Opens the FAQ Pane
+        :return:
+        """
         self.FAQDialog = QDialog()
         self.FAQDialog.setWindowTitle("FAQs about RASPP Utility")
         FAQLabel = QTextEdit(self.FAQDialog)
@@ -210,6 +278,37 @@ Here is a not-so-quick guide on how to use RASPP:
         FAQLabel.setReadOnly(True)
         self.FAQDialog.setModal(False)
         self.FAQDialog.show()
+
+    def is_pathname_valid(self, pathname: str) -> bool:
+        """
+        `True` if the passed pathname is a valid pathname for the current OS;
+        `False` otherwise.
+        """
+
+        try:
+            if not isinstance(pathname, str) or not pathname:
+                return False
+            _, pathname = os.path.splitdrive(pathname)
+
+            root_dirname = os.environ.get('HOMEDRIVE', 'C:') \
+                if sys.platform == 'win32' else os.path.sep
+            assert os.path.isdir(root_dirname)
+
+            root_dirname = root_dirname.rstrip(os.path.sep) + os.path.sep
+
+            for pathname_part in pathname.split(os.path.sep):
+                try:
+                    os.lstat(root_dirname + pathname_part)
+                except OSError as exc:
+                    if hasattr(exc, 'winerror'):
+                        if exc.winerror == 123:
+                            return False
+                    elif exc.errno in {errno.ENAMETOOLONG, errno.ERANGE}:
+                        return False
+        except TypeError as exc:
+            return False
+        else:
+            return True
 
 
 if __name__ == "__main__":

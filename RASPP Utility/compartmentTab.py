@@ -13,6 +13,6 @@ class CompartmentTab(QWidget):
         self.setLayout(self.layout)
 
         self.image = QLabel()
-        pixmap = QPixmap("thonk tonk.png")
+        pixmap = QPixmap("img\\thonk tonk.png")
         self.image.setPixmap(pixmap)
         self.layout.addWidget(self.image, 0, 0, alignment=Qt.AlignCenter)

@@ -515,9 +515,8 @@ class PartTab(QWidget):
 
     def writeToFile(self, jsonList, fileName):
         listA = [jsonList]
-        listB = [listA]
         with open(fileName, 'w') as f:
-            print(f.write(json.dumps(listB, indent=2)[12: -12]))
+            print(f.write(json.dumps(listA, indent=2)[6: -6]))
 
     def rebuildJson(self):
         json = {"REF": self.textREF.text().strip(),

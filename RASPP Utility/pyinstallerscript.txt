@@ -1,0 +1,1 @@
+pyinstaller mainUI.py compartmentTab.py partTab.py -c -F -n 'RASPP Utility'
