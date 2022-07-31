@@ -3,6 +3,7 @@ import json
 from math import floor
 
 from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QTextDocument, QFont
 from PyQt5.QtWidgets import QWidget, QGridLayout, QLabel, QFrame, QPushButton, QRadioButton, QLineEdit, QComboBox, \
     QInputDialog, QMessageBox
 
@@ -23,6 +24,9 @@ class PartTab(QWidget):
         self.partData = []
         self.fileName = "something"
         self.startData = 1000
+        custom_font = QFont()
+        custom_font.setWeight(38)
+        self.setFont(custom_font)
 
     def _createTextFields(self):
         """
@@ -31,7 +35,8 @@ class PartTab(QWidget):
         """
         # Number of times to clone
         self.textAmount = QLineEdit()
-        self.textAmount.setMaximumWidth(50)
+        self.textAmount.setMaximumWidth(80)
+        self.textAmount.setContentsMargins(25, 0, 0, 0)
         self.layout.addWidget(self.textAmount, 0, 1, alignment=Qt.AlignCenter)
 
         # ID Stuff
@@ -250,12 +255,13 @@ class PartTab(QWidget):
 
         self.radioAmount = QRadioButton("Amount:")
         self.radioAmount.setChecked(True)
-        self.radioAmount.setMaximumWidth(60)
+        self.radioAmount.setMaximumWidth(100)
         self.radioAmount.toggled.connect(lambda: self.togglePlaceLimit(1))
         self.layout.addWidget(self.radioAmount, 0, 1)
 
         self.radioBoth = QRadioButton("Both")
         self.radioBoth.setDisabled(True)
+        self.radioBoth.setVisible(False)
         self.radioBoth.toggled.connect(lambda: self.togglePlaceLimit(3))
         self.layout.addWidget(self.radioBoth, 0, 3)
 
@@ -265,7 +271,7 @@ class PartTab(QWidget):
              "Z Scale"])
         self.comboGoUntil.setDisabled(True)
         self.comboGoUntil.currentIndexChanged.connect(self.toggleGoUntilLimit)
-        self.layout.addWidget(self.comboGoUntil, 0, 2, alignment=Qt.AlignCenter)
+        self.layout.addWidget(self.comboGoUntil, 0, 2, alignment=Qt.AlignRight)
 
     def inputPopup(self):
         text, done = QInputDialog.getMultiLineText(self, "Input", "Input Starting Object:")
@@ -438,8 +444,8 @@ class PartTab(QWidget):
                     (float(self.textLimitList[self.comboGoUntil.currentIndex()].text().strip()) <
                      float(self.textInitialList[self.comboGoUntil.currentIndex()].text().strip()) and
                      float(self.textIncrementList[self.comboGoUntil.currentIndex()].text().strip()) < 0):
-                amount = floor((abs(float(self.textLimitList[self.comboGoUntil.currentIndex()].text().strip())) - (
-                    float(self.textInitialList[self.comboGoUntil.currentIndex()].text().strip()))) / abs(
+                amount = 1 + floor((abs(float(self.textLimitList[self.comboGoUntil.currentIndex()].text().strip()) - (
+                    float(self.textInitialList[self.comboGoUntil.currentIndex()].text().strip())))) / abs(
                     float(self.textIncrementList[self.comboGoUntil.currentIndex()].text().strip())))
             else:
                 error = QMessageBox()

@@ -1,10 +1,10 @@
 import sys
-
+import os
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QSize
-from PyQt5.QtGui import QTextDocument
+from PyQt5.QtGui import QTextDocument, QFont, QIcon
 from PyQt5.QtWidgets import QMainWindow, QWidget, QMenuBar, QGridLayout, QTabWidget, QVBoxLayout, QAction, QFileDialog, \
-    QDialog, QPlainTextEdit, QTextEdit, QInputDialog, QTextBrowser
+    QDialog, QPlainTextEdit, QTextEdit, QInputDialog, QTextBrowser, QApplication, QMessageBox
 
 from partTab import PartTab
 from compartmentTab import CompartmentTab
@@ -21,6 +21,7 @@ class MainUI(QMainWindow):
         self.setWindowTitle("RASPP Utility")
         self.layout = QGridLayout()
         self.setLayout(self.layout)
+        self.setWindowIcon(QIcon(self.resourcePath("img\RASPP.ico")))
 
         # Tab Setup
         self._createTabs()
@@ -30,24 +31,29 @@ class MainUI(QMainWindow):
 
         # Setting Default Font
         # TODO
+        font = self.font()
+        font.setPointSize(12)
+        QApplication.instance().setFont(font)
 
         try:
             with open("RASPP.settings", "r") as f:
 
                 if len(f.readlines()) < 2:
+                    print(len(f.readlines()))
                     with open("RASPP.settings", "w") as f:
                         f.write("Sprocket_parts.txt\n")
                         f.write("1000")
+                f.seek(0)
                 try:
                     self.fileName = f.readline().strip()
-                    if not self.is_pathname_valid(self.fileName):
+                    if not self.isPathnameValid(self.fileName):
                         self.fileName = "Sprocket_parts.txt"
                         with open("RASPP.settings", "r") as f:
                             temp = f.readlines()
                             temp[0] = self.fileName.strip() + "\n"
                             with open("RASPP.settings", "w") as f:
                                 f.writelines(temp)
-                except:
+                except Exception as e:
                     self.fileName = "Sprocket_parts.txt"
                     with open("RASPP.settings", "r") as f:
                         temp = f.readlines()
@@ -64,8 +70,6 @@ class MainUI(QMainWindow):
             with open("RASPP.settings", "w") as f:
                 f.write("Sprocket_parts.txt\n")
                 f.write("1000")
-
-
 
     def _createTabs(self):
         """
@@ -130,17 +134,29 @@ class MainUI(QMainWindow):
         fileName1, _ = QFileDialog.getSaveFileName(self, "Change Save Location", self.fileName.strip(),
                                                   "All Files (*);;Text Files (*.txt)", options=options)
         if fileName1:
-            if self.is_pathname_valid(self.fileName):
-                self.fileName = fileName1
-                self.partTab.setFileName(fileName1)
-                with open(fileName1.strip(), "w") as f:
-                    f.write("")
-                with open("RASPP.settings", "r") as f:
-                    temp = f.readlines()
-                    temp[0] = fileName1.strip() + "\n"
-                    with open("RASPP.settings", "w") as f:
-                        f.writelines(temp)
-            else:
+
+            try:
+                if self.isPathnameValid(self.fileName):
+                    self.fileName = fileName1
+                    self.partTab.setFileName(fileName1)
+                    with open(fileName1.strip(), "w") as f:
+                        f.write("")
+                    with open("RASPP.settings", "r") as f:
+                        temp = f.readlines()
+                        temp[0] = fileName1.strip() + "\n"
+                        with open("RASPP.settings", "w") as f:
+                            f.writelines(temp)
+                else:
+                    error = QMessageBox()
+                    error.setWindowTitle("File Path Error")
+                    error.setText("There was an error interpreting your file path.")
+                    error.setInformativeText(
+                        " Please make sure your path is pointing to a valid location on your computer.")
+                    error.setIcon(QMessageBox.Warning)
+                    error.setStandardButtons(QMessageBox.Retry)
+                    error.buttonClicked.connect(self.changeFilePath)
+                    error.exec_()
+            except:
                 error = QMessageBox()
                 error.setWindowTitle("File Path Error")
                 error.setText("There was an error interpreting your file path.")
@@ -148,8 +164,8 @@ class MainUI(QMainWindow):
                     " Please make sure your path is pointing to a valid location on your computer.")
                 error.setIcon(QMessageBox.Warning)
                 error.setStandardButtons(QMessageBox.Retry)
+                error.buttonClicked.connect(self.changeFilePath)
                 error.exec_()
-
 
     def changeStartData(self):
         """
@@ -168,7 +184,7 @@ class MainUI(QMainWindow):
                     " Please make sure your data value is a valid integer.")
                 error.setIcon(QMessageBox.Warning)
                 error.setStandardButtons(QMessageBox.Retry)
-                error.buttonClicked.connect(self.changeStartData())
+                error.buttonClicked.connect(self.changeStartData)
                 error.exec_()
             self.startData = newData
             #self.partTab.
@@ -265,7 +281,7 @@ Here is a not-so-quick guide on how to use RASPP:
         self.FAQDialog = QDialog()
         self.FAQDialog.setWindowTitle("FAQs about RASPP Utility")
         FAQLabel = QTextEdit(self.FAQDialog)
-        FAQLabel.setMarkdown(r"""## FAQ
+        FAQLabel.setMarkdown("""## FAQ
 
  - **Q: I have a really good idea of something to add to the program!** A: Great! Submit an issue on the GitHub Repo with the tag `suggestion` and I will try to look at it. If you do want to submit a suggestion, please try to include some rough code or logic that can make your suggestion easier for me to implement. Not required, but helpful.
  - **Q: Where do I find the blueprint files?** A: RTFM.
@@ -273,13 +289,13 @@ Here is a not-so-quick guide on how to use RASPP:
  - **Q: My output file is blank!** A: check to make sure that your amount is not zero, or that your limit is not inside of your increment (If you are trying to go from 0.75 to 1.25 in steps of 1, then you can't ever have a part, can you?). Also, make sure you are looking in the correct file. The file location can be found in `File -> Change Save Location`.
  - **Q: How do I know which axis is which / which way negative or positive is?** A: The values are ordered in the `blueprint` the same way they are ordered in RASPP: Position (X, Y, Z), Rotation (X, Y, Z), Scale (X, Y, Z). The X axis is from left to right, with right being positive, Y is up/down with up being positive, and Z is front/back with front being positive.  In the pictures below, X is red, Y is blue and Z is green.
 
-<img src="img/pos.png" alt="position" width="250"/> <img src="img/rot.png" alt="position" width="250"/> <img src="img/scale.png" alt="position" width="250"/> """)
+<img src=\"""" + self.resourcePath("img/pos.png") + """\" alt="position" width="250"/> <img src=\"""" + self.resourcePath("img/rot.png") + """\" alt="position" width="250"/> <img src=\"""" + self.resourcePath("img/scale.png") + """\" alt="position" width="250"/> """)
         FAQLabel.setMinimumSize(400, 500)
         FAQLabel.setReadOnly(True)
         self.FAQDialog.setModal(False)
         self.FAQDialog.show()
 
-    def is_pathname_valid(self, pathname: str) -> bool:
+    def isPathnameValid(self, pathname: str) -> bool:
         """
         `True` if the passed pathname is a valid pathname for the current OS;
         `False` otherwise.
@@ -309,6 +325,14 @@ Here is a not-so-quick guide on how to use RASPP:
             return False
         else:
             return True
+
+    def resourcePath(self, relative_path):
+        try:
+            base_path = sys._MEIPASS
+        except Exception:
+            base_path = os.path.abspath(".")
+
+        return os.path.join(base_path, relative_path)
 
 
 if __name__ == "__main__":

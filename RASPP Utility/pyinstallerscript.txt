@@ -1,1 +1,1 @@
-pyinstaller mainUI.py compartmentTab.py partTab.py -c -F -n 'RASPP Utility'
+pyinstaller mainUI.py compartmentTab.py partTab.py -w -F -n 'RASPP Utility' --add-data="img/;img/" --icon="img/RASPP.ico"

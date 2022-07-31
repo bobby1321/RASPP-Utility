@@ -3,8 +3,8 @@
  False,
  False,
  False,
- 'C:\\Users\\bapel\\PycharmProjects\\RASPP '
- 'Utility\\venv\\lib\\site-packages\\PyInstaller\\bootloader\\images\\icon-windowed.ico',
+ 'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
+ 'Utility\\img\\RASPP.ico',
  None,
  False,
  False,
@@ -44,10 +44,6 @@
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
    'PYSOURCE'),
-  ('pyi_rth_subprocess',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_subprocess.py',
-   'PYSOURCE'),
   ('pyi_rth_inspect',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
@@ -59,6 +55,10 @@
   ('pyi_rth_pkgutil',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_subprocess',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_subprocess.py',
    'PYSOURCE'),
   ('mainUI',
    'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
@@ -78,106 +78,106 @@
   ('VCRUNTIME140.dll',
    'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\VCRUNTIME140.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
-   'BINARY'),
-  ('opengl32sw.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\opengl32sw.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
-   'BINARY'),
-  ('libGLESv2.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\libGLESv2.dll',
-   'BINARY'),
   ('PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
-   'BINARY'),
-  ('d3dcompiler_47.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\styles\\qwindowsvistastyle.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\styles\\qwindowsvistastyle.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+  ('opengl32sw.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\opengl32sw.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
    'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('d3dcompiler_47.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'BINARY'),
+  ('libGLESv2.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\libGLESv2.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
   ('libEGL.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\libEGL.dll',
    'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\styles\\qwindowsvistastyle.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\styles\\qwindowsvistastyle.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('select',
+   'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\select.pyd',
+   'EXTENSION'),
   ('_decimal',
    'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_decimal.pyd',
    'EXTENSION'),
   ('_hashlib',
    'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_hashlib.pyd',
    'EXTENSION'),
+  ('unicodedata',
+   'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_socket',
+   'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_socket.pyd',
+   'EXTENSION'),
   ('_lzma',
    'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_lzma.pyd',
    'EXTENSION'),
   ('_bz2',
    'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_bz2.pyd',
-   'EXTENSION'),
-  ('unicodedata',
-   'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\unicodedata.pyd',
-   'EXTENSION'),
-  ('select',
-   'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\select.pyd',
-   'EXTENSION'),
-  ('_socket',
-   'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_socket.pyd',
    'EXTENSION'),
   ('PyQt5.QtGui',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
@@ -195,41 +195,45 @@
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\sip.cp310-win_amd64.pyd',
    'EXTENSION'),
-  ('Qt5Core.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Core.dll',
-   'BINARY'),
   ('Qt5Gui.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Gui.dll',
    'BINARY'),
-  ('Qt5DBus.dll',
+  ('Qt5Core.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5DBus.dll',
-   'BINARY'),
-  ('VCRUNTIME140_1.dll',
-   'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\VCRUNTIME140_1.dll',
-   'BINARY'),
-  ('MSVCP140.dll', 'C:\\Windows\\system32\\MSVCP140.dll', 'BINARY'),
-  ('Qt5Widgets.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Widgets.dll',
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Core.dll',
    'BINARY'),
   ('Qt5Svg.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Svg.dll',
    'BINARY'),
-  ('Qt5WebSockets.dll',
+  ('Qt5DBus.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5DBus.dll',
+   'BINARY'),
+  ('MSVCP140.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\MSVCP140.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('Qt5Network.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Network.dll',
    'BINARY'),
+  ('Qt5WebSockets.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
+   'BINARY'),
   ('Qt5Quick.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Quick.dll',
+   'BINARY'),
+  ('Qt5Widgets.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Widgets.dll',
    'BINARY'),
   ('libcrypto-1_1.dll',
    'C:\\Users\\bapel\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libcrypto-1_1.dll',
@@ -241,73 +245,17 @@
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\MSVCP140_1.dll',
    'BINARY'),
-  ('Qt5QmlModels.dll',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5QmlModels.dll',
-   'BINARY'),
   ('Qt5Qml.dll',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Qml.dll',
    'BINARY'),
+  ('Qt5QmlModels.dll',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5QmlModels.dll',
+   'BINARY'),
   ('base_library.zip',
    'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
    'Utility\\build\\RASPP Utility\\base_library.zip',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ko.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ko.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ar.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ar.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_bg.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_bg.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_en.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_en.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ca.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ca.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_de.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_de.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_sk.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_sk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ja.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ja.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_hu.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_hu.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_es.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_es.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_fr.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_lv.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_lv.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_gd.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_gd.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_fi.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fi.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qtbase_tr.qm',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
@@ -317,82 +265,130 @@
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_pl.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_uk.qm',
+  ('PyQt5\\Qt5\\translations\\qtbase_en.qm',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_uk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_cs.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_cs.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_he.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_he.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_it.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_it.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
-   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
-   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_en.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qtbase_ru.qm',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ru.qm',
    'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_lv.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ar.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ar.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_bg.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_uk.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_uk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_hu.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_hu.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'DATA'),
   ('PyQt5\\Qt5\\translations\\qtbase_da.qm',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_da.qm',
    'DATA'),
-  ('img\\gif3.png',
-   'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
-   'Utility\\img\\gif3.png',
+  ('PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_gd.qm',
    'DATA'),
-  ('img\\gif2.png',
-   'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
-   'Utility\\img\\gif2.png',
+  ('PyQt5\\Qt5\\translations\\qtbase_he.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_he.qm',
    'DATA'),
-  ('img\\gif4.png',
-   'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
-   'Utility\\img\\gif4.png',
+  ('PyQt5\\Qt5\\translations\\qtbase_sk.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_sk.qm',
    'DATA'),
-  ('img\\gif5.png',
-   'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
-   'Utility\\img\\gif5.png',
+  ('PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ja.qm',
+   'C:\\Users\\bapel\\PycharmProjects\\RASPP '
+   'Utility\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ja.qm',
    'DATA'),
   ('img\\scale.png',
    'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
    'Utility\\img\\scale.png',
    'DATA'),
-  ('img\\pos.png',
-   'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
-   'Utility\\img\\pos.png',
-   'DATA'),
   ('img\\ui1.png',
    'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
    'Utility\\img\\ui1.png',
    'DATA'),
-  ('img\\rot.png',
+  ('img\\RASPP.png',
    'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
-   'Utility\\img\\rot.png',
+   'Utility\\img\\RASPP.png',
    'DATA'),
-  ('img\\thonk tonk.png',
+  ('img\\thonktonk.png',
    'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
-   'Utility\\img\\thonk tonk.png',
+   'Utility\\img\\thonktonk.png',
    'DATA'),
-  ('img\\gif1.png',
+  ('img\\gif.gif',
    'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
-   'Utility\\img\\gif1.png',
+   'Utility\\img\\gif.gif',
+   'DATA'),
+  ('img\\pos.png',
+   'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
+   'Utility\\img\\pos.png',
+   'DATA'),
+  ('img\\RASPP.ico',
+   'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
+   'Utility\\img\\RASPP.ico',
    'DATA'),
   ('img\\wow.png',
    'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
    'Utility\\img\\wow.png',
+   'DATA'),
+  ('img\\rot.png',
+   'C:\\Users\\bapel\\Documents\\GitHub\\RASPP-Utility\\RASPP '
+   'Utility\\img\\rot.png',
    'DATA')],
  [],
  False,
  False,
- 1659205017,
+ 1659234326,
  [('runw.exe',
    'C:\\Users\\bapel\\PycharmProjects\\RASPP '
    'Utility\\venv\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',
