@@ -1,6 +1,8 @@
 # Repeated Automated Sprocket Part Placement Utility (RASPP)
 This tool allows you to easily place items in the game Sprocket in patterns by modifying the blueprint file for your vehicle. RASPP isn't meant to replace the game, rather be an add on for the people who like to use the blueprint files as a way to edit vehicles.
 
+Download the program here: ~[LINK TO EXE](https://github.com/bobby1321/RASPP-Utility/blob/19fa932df6a01f253dddcb410f193a7545e6cb84/RASPP%20Utility/dist/RASPP%20Utility.exe)
+
 
 <img src="https://user-images.githubusercontent.com/36699941/181866912-ce38f0ba-054c-4754-ac23-568f5764b45a.gif" alt="position" width="500"/><img src="https://user-images.githubusercontent.com/36699941/181866937-afd2a876-b9a7-44f1-afdc-48c028dbe5e3.png" alt="position" width="300"/>
 
